@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for post in post_list %}
+
+    <table>
+
+    <tr>
+        {{ post.author }}
+        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'PostUpdate' post.id %}">Update</a>
+        {{ post.post }}
+        {{ post.date_time }}
+    </tr>
+
+    </table>
+
+{% endfor %}
+
+{% endblock %}
